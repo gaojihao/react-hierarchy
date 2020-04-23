@@ -1,47 +1,56 @@
 import React from 'react';
 import {
-    PushpinOutlined,
+    CommentOutlined,
+    AppstoreOutlined,
+    BookOutlined,
+    VideoCameraOutlined,
+    WhatsAppOutlined,
+    UserOutlined,
+    TagOutlined,
+    MessageOutlined,
+    FileImageOutlined,
+    CompassOutlined,
   } from '@ant-design/icons';
 
 let menuConfig = [{
     label: '分类管理',
-    icon: <PushpinOutlined />,
+    icon: <AppstoreOutlined />,
     link: '/app/category'
 }, {
     label: '标签管理',
-    icon: <PushpinOutlined />,
+    icon: <TagOutlined />,
     link: '/app/tags'
 },{
     label: '课程管理',
-    icon: <PushpinOutlined />,
+    icon: <BookOutlined />,
     link: '/app/course'
 },{
     label: '视频管理',
-    icon: <PushpinOutlined />,
+    icon: <VideoCameraOutlined />,
     link: '/app/video'
 },{
     label: '音频管理',
-    icon: <PushpinOutlined />,
+    icon: <WhatsAppOutlined />,
     link: '/app/audio'
 },{
     label: '文章管理',
-    icon: <PushpinOutlined />,
+    icon: <CompassOutlined />,
     link: '/app/posts'
 },{
     label: '用户管理',
     link: '/app/user',
-    icon: <PushpinOutlined />,
+    icon: <UserOutlined />,
 }, {
     label: '评论管理',
     link: '/app/comment',
-    icon: <PushpinOutlined />,
+    icon: <CommentOutlined />,
 },{
     label: '图片资源',
     link: '/app/picture',
-    icon: <PushpinOutlined />,
+    icon: <FileImageOutlined />,
 }, {
     label: '意见反馈',
-    icon: <PushpinOutlined />,
+    icon: <MessageOutlined />,
     link: '/app/feebback',
 }]
 

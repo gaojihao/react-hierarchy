@@ -14,22 +14,22 @@ const routes = [{
 	breadcrumbPath: '#'
 }, {
 	path: '/app/category',
-	component: Audio,
+	component: Category,
 	breadcrumbName: '分类列表',
 	breadcrumbPath: '/app/category'
 }, {
 	path: '/app/category/add',
-	component: Audio,
+	component: Category,
 	breadcrumbName: '添加分类',
 	breadcrumbPath: '/app/category/add'
 }, {
 	path: '/app/tags',
-	component: Audio,
+	component: Tag,
 	breadcrumbName: '标签列表',
 	breadcrumbPath: '/app/tags'
 }, {
 	path: '/app/tags/add',
-	component: Audio,
+	component: Tag,
 	breadcrumbName: '添加标签',
 	breadcrumbPath: '/app/tags/add'
 }, {
@@ -44,12 +44,12 @@ const routes = [{
 	breadcrumbPath: '/app/course/add'
 }, {
 	path: '/app/video',
-	component: Audio,
+	component: Video,
 	breadcrumbName: '视频列表',
 	breadcrumbPath: '/app/video'
 }, {
 	path: '/app/video/add',
-	component: Audio,
+	component: Video,
 	breadcrumbName: '添加视频',
 	breadcrumbPath: '/app/video/add'
 }, {
@@ -64,17 +64,17 @@ const routes = [{
 	breadcrumbPath: '/app/audio/add'
 }, {
 	path: '/app/posts',
-	component: Audio,
+	component: Posts,
 	breadcrumbName: '文章列表',
 	breadcrumbPath: '/app/posts'
 }, {
 	path: '/app/posts/add',
-	component: Audio,
+	component: Posts,
 	breadcrumbName: '添加文章',
 	breadcrumbPath: '/app/posts/add'
 }, {
 	path: '/app/user',
-	component: Audio,
+	component: Member,
 	breadcrumbName: '用户管理',
 	breadcrumbPath: '/app/user'
 }, {
@@ -94,7 +94,7 @@ const routes = [{
 	breadcrumbPath: '/app/feedback/detail'
 },{
 	path: '/app/picture',
-	component: Audio,
+	component: Picture,
 	breadcrumbName: '图片资源',
 	breadcrumbPath: '/app/picture'
 }]
