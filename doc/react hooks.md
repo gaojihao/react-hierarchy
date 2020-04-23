@@ -1,6 +1,6 @@
 # React Hooks
 
-### State Hook
+### 1.State Hook
 
 ``` JavaScript(JSON)
 import React, { useState } from 'react';
@@ -41,7 +41,7 @@ setState(prevState => {
 从上面的代码可以看出，setState 的参数除了数字、字符串或对象，还可以是函数。当需要根据之前的状态来计算出当前状态值的时候，就需要传入函数了，这跟Class Component的 setState 有点像。
 另外一个跟Class Component的 setState 很像的一点是，当新传入的值跟之前的值一样时(使用Object.is比较)，不会触发更新
 
-Effect Hook
+### 2.Effect Hook
 useEffect会在每次 DOM 渲染后执行，不会阻塞页面渲染。它同时具备componentDidMount、componentDidUpdate和componentWillUnmount三个生命周期函数的执行时机
 
 
@@ -86,7 +86,7 @@ useEffect(() => {
 
 当副作用只需要在组件挂载的时候和卸载的时候执行，第二个参数可以传一个空数组[]
 
-useContext
+### 3.useContext
 useContext可以很方便的去订阅 context 的改变，并在合适的时候重新渲染组件。我们先来熟悉下标准的 context API 用法
 
 ``` JavaScript(JSON)
@@ -144,7 +144,7 @@ function HeaderBar() {
 ```
 
 
-useReducer
+### 4.useReducer
 useReducer的用法跟 Redux 非常相似，当 state 的计算逻辑比较复杂又或者需要根据以前的值来计算时，使用这个 Hook 比useState会更好
 
 ``` JavaScript(JSON)
@@ -181,7 +181,7 @@ function Counter({initialCount}) {
 }
 ```
 
-useCallback/useMemo
+### 5.useCallback/useMemo
 useCallback和useMemo设计的初衷是用来做性能优化的
 传给 Button 的 onClick 方法每次都是重新创建的，这会导致每次 Foo render 的时候，Button 也跟着 render。优化方法有 2 种，箭头函数和 bind
 
@@ -236,7 +236,11 @@ const Parent = React.memo(({ a, b }) => {
   )
 });
 
-useRef
+```
+
+### 6.useRef
+
+``` JavaScript(JSON)
 function() {
   const myRef = useRef(null);
 
@@ -267,7 +271,7 @@ function Counter() {
 
 ```
 
-自定义Hooks
+### 7.自定义Hooks
 
 ```	JavaScript(JSON)
 
