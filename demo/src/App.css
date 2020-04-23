@@ -9,7 +9,9 @@
 
 .logo_container {
   background-color: #001529;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   line-height: 61.5px;
 }
 
@@ -18,6 +20,7 @@
   font-size: 18px;
   background: transparent;
   padding: 2px;
+  text-align: center;
 }
 
 .ant-layout-header {
