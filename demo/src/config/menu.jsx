@@ -51,7 +51,7 @@ let menuConfig = [{
 }, {
     label: '意见反馈',
     icon: <MessageOutlined />,
-    link: '/app/feebback',
+    link: '/app/feedback',
 }]
 
 export default menuConfig

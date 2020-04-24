@@ -18,20 +18,10 @@ const routes = [{
 	breadcrumbName: '分类列表',
 	breadcrumbPath: '/app/category'
 }, {
-	path: '/app/category/add',
-	component: Category,
-	breadcrumbName: '添加分类',
-	breadcrumbPath: '/app/category/add'
-}, {
 	path: '/app/tags',
 	component: Tag,
 	breadcrumbName: '标签列表',
 	breadcrumbPath: '/app/tags'
-}, {
-	path: '/app/tags/add',
-	component: Tag,
-	breadcrumbName: '添加标签',
-	breadcrumbPath: '/app/tags/add'
 }, {
 	path: '/app/course',
 	component: Audio,
