@@ -4,10 +4,12 @@ import {Table, Form, Input, Button} from 'antd';
 const dataSource = [
     {
       categoryId: 1,
+      key: '1',
       name: '胡彦斌',
     },
     {
       categoryId: 2,
+      key: '2',
       name: '胡彦斌',
     },
 ];
@@ -62,7 +64,7 @@ export default () => {
             </Button>
           </Form.Item>
         </Form>
-        <Table dataSource={dataSource} columns={columns} />
+        <Table bordered={true} dataSource={dataSource} columns={columns} />
       </>
     );
 };
