@@ -30,7 +30,7 @@ const layout = {
 };
 
 const tailLayout = {
-  wrapperCol: { offset: 4, span: 4 },
+  wrapperCol: { offset: 2, span: 4 },
 };
   
 
@@ -54,7 +54,7 @@ export default () => {
             name="name"
             rules={[{ required: true, message: "请输入类别" }]}
           >
-            <Input size="large"/>
+            <Input placeholder="请输入类别名称按地方撒大多数" size="large"/>
           </Form.Item>
           <Form.Item {...tailLayout}>
             <Button size="large" type="primary" htmlType="submit">
