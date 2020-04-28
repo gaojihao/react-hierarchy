@@ -1,5 +1,5 @@
 import React from 'react';
-import {Table} from 'antd';
+import {Table, Form, Input, Button} from 'antd';
 
 const dataSource = [
     {
@@ -16,7 +16,7 @@ const dataSource = [
     },
   ];
   
-  const columns = [
+const columns = [
     {
       title: '姓名',
       dataIndex: 'name',
@@ -32,11 +32,46 @@ const dataSource = [
       dataIndex: 'address',
       key: 'address',
     },
-  ];
+];
+
+const layout = {
+  wrapperCol: { span: 16 },
+};
+
+const tailLayout = {
+  wrapperCol: { offset: 4, span: 4 },
+};
   
 
 export default () => {
+
+  const onFinish = (values: any) => {
+    console.log('Success:', values);
+  };
+  
     return (
+      <>
+        <Form {...layout}
+          layout="inline"
+          name="basic"
+          style={{marginBottom:'10px'}}
+          initialValues={{ remember: true }}
+          onFinish={onFinish}
+        >
+          <Form.Item
+            label="类别"
+            name="name"
+            rules={[{ required: true, message: "请输入类别" }]}
+          >
+            <Input size="large"/>
+          </Form.Item>
+          <Form.Item {...tailLayout}>
+            <Button size="large" type="primary" htmlType="submit">
+              添加
+            </Button>
+          </Form.Item>
+        </Form>
         <Table dataSource={dataSource} columns={columns} />
+      </>
     );
 };
