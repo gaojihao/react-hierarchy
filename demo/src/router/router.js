@@ -5,6 +5,8 @@ import Picture from './../pages/Picture';
 import Posts from './../pages/Posts';
 import Tag from './../pages/Tag';
 import Video from './../pages/Video';
+import Feedback from './../pages/Feedback';
+import Comment from './../pages/Comment';
 
 
 const routes = [{
@@ -69,20 +71,15 @@ const routes = [{
 	breadcrumbPath: '/app/user'
 }, {
 	path: '/app/comment',
-	component: Audio,
+	component: Comment,
 	breadcrumbName: '评论管理',
 	breadcrumbPath: '/app/comment'
 }, {
 	path: '/app/feedback',
-	component: Audio,
+	component: Feedback,
 	breadcrumbName: '意见列表',
 	breadcrumbPath: '/app/feedback'
 }, {
-	path: '/app/feedback/detail',
-	component: Audio,
-	breadcrumbName: '意见详情',
-	breadcrumbPath: '/app/feedback/detail'
-},{
 	path: '/app/picture',
 	component: Picture,
 	breadcrumbName: '图片资源',
