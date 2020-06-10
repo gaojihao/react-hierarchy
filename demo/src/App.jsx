@@ -33,7 +33,7 @@ function App() {
               <ZLMenu menuList={menuConfig}></ZLMenu>
             </Row>
           </Sider>
-          <Layout>
+          <Layout style={{backgroundColor:'white'}}>
             <Header style={{ backgroundColor: '#fff' }}>
               <Row align='middle' type='flex'>
                 <Col span={1}>
