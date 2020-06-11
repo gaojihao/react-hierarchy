@@ -1,41 +1,42 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import {Table} from 'antd';
-
-const dataSource = [
-    {
-      key: '1',
-      name: '胡彦斌',
-      age: 32,
-      address: '西湖区湖底公园1号',
-    },
-    {
-      key: '2',
-      name: '胡彦祖',
-      age: 42,
-      address: '西湖区湖底公园1号',
-    },
-  ];
+import { memberList } from '../../api/member';
   
   const columns = [
     {
       title: '姓名',
-      dataIndex: 'name',
-      key: 'name',
+      dataIndex: 'nick_name',
+      key: 'nick_name',
     },
     {
-      title: '年龄',
-      dataIndex: 'age',
-      key: 'age',
+      title: '手机号',
+      dataIndex: 'phone',
+      key: 'phone',
     },
     {
-      title: '住址',
-      dataIndex: 'address',
-      key: 'address',
+      title: '性别',
+      dataIndex: 'sex',
+      key: 'sex',
     },
   ];
   
 
 export default () => {
+
+  const [dataSource, setDataSource] = useState();
+
+  useEffect(() => {
+    getMemberList();
+  },[]);
+
+  const getMemberList = () => {
+    memberList().then((res) => {
+      setDataSource(res);
+    },onrejected => {
+      console.log(`onrejected=========${JSON.stringify(onrejected)}`);
+    })
+  };
+
     return (
         <Table dataSource={dataSource} columns={columns} />
     );

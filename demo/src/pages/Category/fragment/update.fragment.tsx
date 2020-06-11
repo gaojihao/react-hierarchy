@@ -21,17 +21,13 @@ export const UpdateMajorFragment: React.FC<IModalFragmentProps<IRecordType>> = (
     const updateRequest = async(values: {}) => {
 
         const param =  {id:record.id, ...values};
-        console.log(`param====${JSON.stringify(param)}`);
         
         try {
-            const res = await editCategory(param);
-            console.log(`res====${JSON.stringify(res)}`);
+            await editCategory(param);
             refreshPage?.();
             setVisible!(false);
 
         } catch (error) {
-            console.log(`error====${JSON.stringify(error)}`);
-            refreshPage?.();
             setVisible!(false);
         }
     };

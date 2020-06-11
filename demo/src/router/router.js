@@ -7,6 +7,7 @@ import Tag from './../pages/Tag';
 import Video from './../pages/Video';
 import Feedback from './../pages/Feedback';
 import Comment from './../pages/Comment';
+import Auth from './../pages/Auth';
 
 
 const routes = [{
@@ -84,6 +85,11 @@ const routes = [{
 	component: Picture,
 	breadcrumbName: '图片资源',
 	breadcrumbPath: '/app/picture'
+}, {
+	path: '/app/common',
+	component: Auth,
+	breadcrumbName: '验证码',
+	breadcrumbPath: '/app/common'
 }]
 
 export default routes
