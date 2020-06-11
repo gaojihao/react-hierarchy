@@ -10,15 +10,18 @@ const columns = [
     },
     {
       title: '类别',
-      dataIndex: 'name'
+      dataIndex: 'name',
+      key: 'name',
     },
     {
       title: '创建日期',
-      dataIndex: 'create_time'
+      dataIndex: 'create_time',
+      key: 'create_time',
     },
     {
       title: '更新日志',
-      dataIndex: 'update_time'
+      dataIndex: 'update_time',
+      key: 'update_time',
     },
 ];
 
