@@ -79,7 +79,6 @@ const onFinish = (values: any) => {
         layout="inline"
         name="basic"
         style={{marginBottom:'10px'}}
-        initialValues={{ remember: true }}
         onFinish={onFinish}
       >
         <Form.Item

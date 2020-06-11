@@ -1,8 +1,21 @@
 import React,{useState, useEffect} from 'react';
 import {Table, Form, Input, Button} from 'antd';
-import {addCategory, editCategory, categoryList} from '../../api/major';
+import {addCategory, categoryList} from '../../api/major';
+import { ButtonDelegateModal } from '../../component/Modal/delegate.modal';
+import { UpdateMajorFragment } from './fragment/update.fragment';
+
+const layout = {
+  wrapperCol: { span: 16 },
+};
+
+const tailLayout = {
+  wrapperCol: { offset: 2, span: 4 },
+};
   
-const columns = [
+
+export default () => {
+
+  const columns = [
     {
       title: 'ID',
       dataIndex: 'id',
@@ -23,18 +36,21 @@ const columns = [
       dataIndex: 'update_time',
       key: 'update_time',
     },
+    {
+      title: '操作',
+      key: 'action',
+      render: (record: {}) => {
+        return (
+          <ButtonDelegateModal
+            delegate={{ record, refreshPage: getMajorList }}
+            button={<Button type='primary'>编辑</Button>}  
+            title='编辑'
+            Fragment={UpdateMajorFragment}
+            />
+        );
+      }
+    }
 ];
-
-const layout = {
-  wrapperCol: { span: 16 },
-};
-
-const tailLayout = {
-  wrapperCol: { offset: 2, span: 4 },
-};
-  
-
-export default () => {
 
   const [dataSource, setDataSource] = useState();
 
@@ -67,7 +83,6 @@ export default () => {
           layout="inline"
           name="basic"
           style={{marginBottom:'10px'}}
-          initialValues={{ remember: true }}
           onFinish={onFinish}
         >
           <Form.Item
