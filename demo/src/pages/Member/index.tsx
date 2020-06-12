@@ -50,6 +50,6 @@ export default () => {
   };
 
     return (
-        <Table dataSource={dataSource} columns={columns} />
+        <Table bordered={true} dataSource={dataSource} columns={columns} />
     );
 };

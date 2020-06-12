@@ -1,6 +1,6 @@
-import React,{useState, useEffect} from 'react';
-import {Table, Form, Input, Button} from 'antd';
-import {addCategory, categoryList} from '../../api/major';
+import React, { useState, useEffect } from 'react';
+import { Table, Form, Input, Button } from 'antd';
+import { addCategory, categoryList } from '../../api/major';
 import { ButtonDelegateModal } from '../../component/Modal/delegate.modal';
 import { UpdateMajorFragment } from './fragment/update.fragment';
 
@@ -11,7 +11,7 @@ const layout = {
 const tailLayout = {
   wrapperCol: { offset: 2, span: 4 },
 };
-  
+
 
 export default () => {
 
@@ -43,20 +43,20 @@ export default () => {
         return (
           <ButtonDelegateModal
             delegate={{ record, refreshPage: getMajorList }}
-            button={<Button type='primary'>编辑</Button>}  
+            button={<Button type='primary'>编辑</Button>}
             title='编辑'
             Fragment={UpdateMajorFragment}
-            />
+          />
         );
       }
     }
-];
+  ];
 
   const [dataSource, setDataSource] = useState();
 
   useEffect(() => {
     getMajorList();
-  },[]);
+  }, []);
 
   const getMajorList = () => {
     categoryList().then((res: any) => {
@@ -70,33 +70,33 @@ export default () => {
 
     addCategory(values).then(res => {
       getMajorList();
-    },error => {
+    }, error => {
       console.log(`error=========${JSON.stringify(error)}`);
     })
   };
-  
-    return (
-      <>
-        <Form {...layout}
-          layout="inline"
-          name="basic"
-          style={{marginBottom:'10px'}}
-          onFinish={onFinish}
+
+  return (
+    <>
+      <Form {...layout}
+        layout="inline"
+        name="basic"
+        style={{ marginBottom: '10px' }}
+        onFinish={onFinish}
+      >
+        <Form.Item
+          label="类别"
+          name="name"
+          rules={[{ required: true, message: "请输入类别" }]}
         >
-          <Form.Item
-            label="类别"
-            name="name"
-            rules={[{ required: true, message: "请输入类别" }]}
-          >
-            <Input placeholder="请输入类别名称" size="large"/>
-          </Form.Item>
-          <Form.Item {...tailLayout}>
-            <Button size="large" type="primary" htmlType="submit">
-              添加
+          <Input placeholder="请输入类别名称" size="large" />
+        </Form.Item>
+        <Form.Item {...tailLayout}>
+          <Button size="large" type="primary" htmlType="submit">
+            添加
             </Button>
-          </Form.Item>
-        </Form>
-        <Table bordered={true} dataSource={dataSource} columns={columns} />
-      </>
-    );
+        </Form.Item>
+      </Form>
+      <Table bordered={true} dataSource={dataSource} columns={columns} />
+    </>
+  );
 };

@@ -90,7 +90,7 @@ export default () => {
           <p className="ant-upload-text">点击或拖拽上传</p>
         </Dragger>
       </div>
-      <Table dataSource={dataSource} columns={columns} />
+      <Table bordered={true} dataSource={dataSource} columns={columns} />
     </React.Fragment>
   );
 };

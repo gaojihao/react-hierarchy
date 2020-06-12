@@ -36,7 +36,5 @@ const dataSource = [
   
 
 export default () => {
-    return (
-        <Table dataSource={dataSource} columns={columns} />
-    );
+    return (<Table bordered={true} dataSource={dataSource} columns={columns} />);
 };
