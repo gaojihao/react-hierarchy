@@ -59,10 +59,8 @@ export default () => {
   },[]);
 
   const getMajorList = () => {
-    categoryList().then((res) => {
+    categoryList().then((res: any) => {
       setDataSource(res);
-    },onrejected => {
-      console.log(`onrejected=========${JSON.stringify(onrejected)}`);
     })
   };
 

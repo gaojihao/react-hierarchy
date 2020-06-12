@@ -50,14 +50,10 @@ export default () => {
   },[]);
 
   const getFeedbackList = () => {
-    FeedbackList().then((res) => {
+    FeedbackList().then((res: any) => {
       setDataSource(res);
-    },onrejected => {
-      console.log(`onrejected=========${JSON.stringify(onrejected)}`);
     })
   };
 
-    return (
-        <Table dataSource={dataSource} columns={columns} />
-    );
+    return (<Table dataSource={dataSource} columns={columns} />);
 };
