@@ -2,18 +2,6 @@ import React,{useState, useEffect} from 'react';
 import {Table, Form, Input, Button} from 'antd';
 import {addTag, editTag, tagList} from '../../api/tag';
 
-
-const dataSource = [
-  {
-    tagId: 1,
-    name: '胡彦斌',
-  },
-  {
-    tagId: 2,
-    name: '胡彦斌',
-  },
-];
-
 const columns = [
   {
     title: 'ID',
@@ -55,7 +43,7 @@ export default () => {
   },[]);
 
   const getTagsList = () => {
-    tagList().then((res) => {
+    tagList().then((res: any) => {
       setDataSource(res);
     },onrejected => {
       console.log(`onrejected=========${JSON.stringify(onrejected)}`);
