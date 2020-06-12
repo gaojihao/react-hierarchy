@@ -75,10 +75,8 @@ export default () => {
   },[]);
 
   const getPictureList = () => {
-    PictureList().then((res) => {
+    PictureList().then((res: any) => {
       setDataSource(res);
-    },onrejected => {
-      console.log(`onrejected=========${JSON.stringify(onrejected)}`);
     })
   };
 

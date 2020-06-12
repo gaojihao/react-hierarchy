@@ -34,10 +34,8 @@ export default () => {
   },[]);
 
   const getAuthList = () => {
-    authCodeList().then((res) => {
+    authCodeList().then((res: any) => {
       setDataSource(res);
-    },onrejected => {
-      console.log(`onrejected=========${JSON.stringify(onrejected)}`);
     })
   };
 

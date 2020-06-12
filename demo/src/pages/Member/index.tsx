@@ -44,10 +44,8 @@ export default () => {
   },[]);
 
   const getMemberList = () => {
-    memberList().then((res) => {
+    memberList().then((res: any) => {
       setDataSource(res);
-    },onrejected => {
-      console.log(`onrejected=========${JSON.stringify(onrejected)}`);
     })
   };
 

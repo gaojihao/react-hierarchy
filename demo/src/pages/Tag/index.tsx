@@ -45,8 +45,6 @@ export default () => {
   const getTagsList = () => {
     tagList().then((res: any) => {
       setDataSource(res);
-    },onrejected => {
-      console.log(`onrejected=========${JSON.stringify(onrejected)}`);
     })
   };
 
