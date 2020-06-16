@@ -25,7 +25,7 @@ const columns = [
       key: 'size',
       render: (record: number) => {
         return (
-        <div>{`${record/1024}kb`}</div>
+        <div>{`${Math.round(record/1024)}kb`}</div>
         );
       }
     },
@@ -41,7 +41,7 @@ const columns = [
       title: '图片',
       render: (record: {width: number, height: number, url: string}) => {
         return (
-        <img width={60*record.height/record.width} height={60} alt="" src={'http://127.0.0.1:8080/'+record.url} />
+        <img width={60*record.width/record.height} height={60} alt="" src={'http://127.0.0.1:8080/'+record.url} />
         );
       }
     },
