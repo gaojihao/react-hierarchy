@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import {Table, Form, Input, Button} from 'antd';
-import {addTag, editTag, tagList} from '../../api/tag';
+import {addTag, tagList} from '../../api/tag';
 import { ButtonDelegateModal } from '../../component/Modal/delegate.modal';
 import { UpdateTagFragment } from './fragment/update.fragment';
 

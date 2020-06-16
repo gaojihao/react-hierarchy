@@ -93,7 +93,7 @@ export default () => {
         <Form.Item {...tailLayout}>
           <Button size="large" type="primary" htmlType="submit">
             添加
-            </Button>
+          </Button>
         </Form.Item>
       </Form>
       <Table bordered={true} dataSource={dataSource} columns={columns} />

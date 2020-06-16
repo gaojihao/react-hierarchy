@@ -4,15 +4,6 @@ import { IModalFragmentProps, IRecordType } from '../../../component/Modal/deleg
 import { Form } from '../../../component/Form';
 import { editTag } from '../../../api/tag';
 
-const layout = {
-    labelCol: { span: 3 },
-    wrapperCol: { span: 12 },
-};
-
-const tailLayout = {
-    wrapperCol: { offset: 8, span: 16 },
-};
-
 
 export const UpdateTagFragment: React.FC<IModalFragmentProps<IRecordType>> = ({ delegate: {
     submitRef, record, refreshPage, setVisible
@@ -38,7 +29,7 @@ export const UpdateTagFragment: React.FC<IModalFragmentProps<IRecordType>> = ({ 
                 list={[{
                     label: '名称',
                     variableName: 'name',
-                    Component: <Input value={record.name}/>,
+                    Component: <Input defaultValue={record.name}/>,
                     rules: [{
                         required: true, 
                         message: '请输入名称'

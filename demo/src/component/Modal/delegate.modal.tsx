@@ -36,7 +36,7 @@ export const ButtonDelegateModal: React.FC<IModalProps<any>> = <T extends IRecor
 
     return (
         <React.Fragment>
-            <span onClick={() => setVisible(true)}>
+            <span onClick={(e) => setVisible(true)}>
                 {button}
             </span>
             <Modal

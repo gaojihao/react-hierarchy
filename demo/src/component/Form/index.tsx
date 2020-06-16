@@ -33,7 +33,7 @@ export const Form = (formProps: IFormProps) => {
         [key: string]: any;
     } = {};
 
-    const layout = formProps.layout ? formProps.layout : { layout: 'inline' };
+    const layout = formProps.layout ? formProps.layout : { layout: 'vertical' };
 
     const Fields = formProps.list.map((item:IFormList) => {
 

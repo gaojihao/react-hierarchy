@@ -8,6 +8,7 @@ import Video from './../pages/Video';
 import Feedback from './../pages/Feedback';
 import Comment from './../pages/Comment';
 import Auth from './../pages/Auth';
+import Course from './../pages/Course';
 
 
 const routes = [{
@@ -27,15 +28,10 @@ const routes = [{
 	breadcrumbPath: '/app/tags'
 }, {
 	path: '/app/course',
-	component: Audio,
+	component: Course,
 	breadcrumbName: '课程列表',
 	breadcrumbPath: '/app/course'
-}, {
-	path: '/app/course/add',
-	component: Audio,
-	breadcrumbName: '添加课程',
-	breadcrumbPath: '/app/course/add'
-}, {
+},  {
 	path: '/app/video',
 	component: Video,
 	breadcrumbName: '视频列表',
