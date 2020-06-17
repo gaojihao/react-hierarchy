@@ -70,6 +70,14 @@ export const AddCourseFragment: React.FC<IModalFragmentProps<IRecordType>> = ({ 
                         message: '请输入子标题'
                     }],
                 },{
+                    label: '封面',
+                    variableName: 'cover_image',
+                    Component: <Input />,
+                    rules: [{
+                        required: true, 
+                        message: '请输入课程封面'
+                    }],
+                }, {
                     label: '摘要',
                     variableName: 'summary',
                     Component: <Input />,
