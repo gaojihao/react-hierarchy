@@ -8,6 +8,7 @@ import {
   useParams
 } from "react-router-dom";
 import './App.css';
+import HookPage from './hooks';
 
 export default function App() {
   return (
@@ -18,7 +19,7 @@ export default function App() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/hooks">hooks</Link>
           </li>
           <li>
             <Link to="/topics">Topics</Link>
@@ -26,8 +27,8 @@ export default function App() {
         </ul>
 
         <Switch>
-          <Route path="/about">
-            <About />
+          <Route path="/hooks">
+            <HookPage />
           </Route>
           <Route path="/topics">
             <Topics />
@@ -43,10 +44,6 @@ export default function App() {
 
 function Home() {
   return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
 }
 
 function Topics() {
