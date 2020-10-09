@@ -1,4 +1,4 @@
-import React, { Component, ComponentElement } from 'react';
+import React, { Component } from 'react';
 
 
 // 装饰器是一个对类进行处理的函数。装饰器函数的第一个参数，就是所要装饰的目标类
