@@ -4,11 +4,10 @@ import {
   Switch,
   Route,
   Link,
-  useRouteMatch,
-  useParams
 } from "react-router-dom";
 import './App.css';
 import HookPage from './hooks';
+import DecoratorPage from './decorator';
 
 export default function App() {
   return (
@@ -22,7 +21,7 @@ export default function App() {
             <Link to="/hooks">hooks</Link>
           </li>
           <li>
-            <Link to="/topics">Topics</Link>
+            <Link to="/decorator">Decorator</Link>
           </li>
         </ul>
 
@@ -30,8 +29,8 @@ export default function App() {
           <Route path="/hooks">
             <HookPage />
           </Route>
-          <Route path="/topics">
-            <Topics />
+          <Route path="/decorator">
+            <DecoratorPage />
           </Route>
           <Route path="/">
             <Home />
@@ -44,39 +43,4 @@ export default function App() {
 
 function Home() {
   return <h2>Home</h2>;
-}
-
-function Topics() {
-  let match = useRouteMatch();
-
-  return (
-    <div>
-      <h2>Topics</h2>
-
-      <ul>
-        <li>
-          <Link to={`${match.url}/components`}>Components</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/props-v-state`}>
-            Props v. State
-          </Link>
-        </li>
-      </ul>
-
-      <Switch>
-        <Route path={`${match.path}/:topicId`}>
-          <Topic />
-        </Route>
-        <Route path={match.path}>
-          <h3>Please select a topic.</h3>
-        </Route>
-      </Switch>
-    </div>
-  );
-}
-
-function Topic() {
-  let { topicId } = useParams() as {topicId : string};
-  return <h3>Requested topic ID: {topicId}</h3>;
 }
