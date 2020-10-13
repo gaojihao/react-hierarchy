@@ -8,6 +8,11 @@ import {
 import './App.css';
 import HookPage from './hooks';
 import DecoratorPage from './decorator';
+import GeneratorPage from './generator';
+import IteratorPage from './iterator';
+import ProxyPage from './proxy';
+import ReflectPage from './reflect';
+import SymbolPage from './symbol';
 
 export default function App() {
   return (
@@ -23,6 +28,21 @@ export default function App() {
           <li>
             <Link to="/decorator">Decorator</Link>
           </li>
+          <li>
+            <Link to="/generator">Generator</Link>
+          </li>
+          <li>
+            <Link to="/iterator">Iterator</Link>
+          </li>
+          <li>
+            <Link to="/proxy">Proxy</Link>
+          </li>
+          <li>
+            <Link to="/reflect">Reflect</Link>
+          </li>
+          <li>
+            <Link to="/symbol">Symbol</Link>
+          </li>
         </ul>
 
         <Switch>
@@ -31,6 +51,21 @@ export default function App() {
           </Route>
           <Route path="/decorator">
             <DecoratorPage />
+          </Route>
+          <Route path="/generator">
+            <GeneratorPage />
+          </Route>
+          <Route path="/iterator">
+            <IteratorPage />
+          </Route>
+          <Route path="/proxy">
+            <ProxyPage />
+          </Route>
+          <Route path="/reflect">
+            <ReflectPage />
+          </Route>
+          <Route path="/symbol">
+            <SymbolPage />
           </Route>
           <Route path="/">
             <Home />
