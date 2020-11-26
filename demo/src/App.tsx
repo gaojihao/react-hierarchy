@@ -13,6 +13,7 @@ import IteratorPage from './iterator';
 import ProxyPage from './proxy';
 import ReflectPage from './reflect';
 import SymbolPage from './symbol';
+import AntMobile from './antMobile';
 
 export default function App() {
   return (
@@ -43,6 +44,9 @@ export default function App() {
           <li>
             <Link to="/symbol">Symbol</Link>
           </li>
+          <li>
+            <Link to="/ant">ant</Link>
+          </li>
         </ul>
 
         <Switch>
@@ -66,6 +70,9 @@ export default function App() {
           </Route>
           <Route path="/symbol">
             <SymbolPage />
+          </Route>
+          <Route path="/ant">
+            <AntMobile />
           </Route>
           <Route path="/">
             <Home />
