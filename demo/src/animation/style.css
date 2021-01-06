@@ -6,7 +6,7 @@
     /* 设置动画一个周期的时长 */
     animation-duration: 1s;
     /* 设置动画速度， 即通过建立加速度曲线，设置动画在关键帧之间是如何变化。 */
-    animation-timing-function: linear;
+    animation-timing-function:linear;
     /* 设置延时，即从元素加载完成之后到动画序列开始执行的这段时间 */
     animation-delay: 1s;
     /* 指定动画执行前后如何为目标元素应用样式。 */
@@ -15,6 +15,7 @@
     animation-direction: normal;
     /* 设置动画重复次数， 可以指定infinite无限次重复动画 */
     animation-iteration-count: infinite;
+    /* position: absolute; */
     /* animation-play-state 允许暂停和恢复动画。 */
 }
 
@@ -29,14 +30,17 @@ transition只能定义开始状态和结束状态，不能定义中间状态，�
 @keyframes rainbow {
     0% { 
         height:250px;
-        width:250px; 
+        width:250px;
+        transform: rotate(0deg);
     }
     50% { 
         height:450px;
         width:450px; 
+        transform: rotate(180deg);
     }
     100% { 
         height:250px;
         width:250px; 
+        transform: rotate(360deg);
     }
   }
