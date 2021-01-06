@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
 } from "react-router-dom";
 import './App.css';
 import HookPage from './hooks';
@@ -14,41 +13,14 @@ import ProxyPage from './proxy';
 import ReflectPage from './reflect';
 import SymbolPage from './symbol';
 import AntMobile from './antMobile';
+import Header from './Header';
 
 export default function App() {
+  
   return (
     <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/hooks">hooks</Link>
-          </li>
-          <li>
-            <Link to="/decorator">Decorator</Link>
-          </li>
-          <li>
-            <Link to="/generator">Generator</Link>
-          </li>
-          <li>
-            <Link to="/iterator">Iterator</Link>
-          </li>
-          <li>
-            <Link to="/proxy">Proxy</Link>
-          </li>
-          <li>
-            <Link to="/reflect">Reflect</Link>
-          </li>
-          <li>
-            <Link to="/symbol">Symbol</Link>
-          </li>
-          <li>
-            <Link to="/ant">ant</Link>
-          </li>
-        </ul>
-
+      <div className='path-ref'>
+        <Header />
         <Switch>
           <Route path="/hooks">
             <HookPage />

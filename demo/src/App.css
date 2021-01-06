@@ -1,3 +1,33 @@
 .App {
   text-align: center;
 }
+
+.path-ref ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.path-ref ul li a {
+  padding: 15px;
+  margin-right: 10px;
+}
+
+.path-ref ul a:hover {
+  background-color: hsl(219, 71%, 54%);
+  color: white;
+}
+
+.active {
+  background-color: hsl(219, 71%, 54%);
+  color: white;
+}
+
+.inActive {
+  color: #333;
+  background-color: transparent;
+}
+
+.am-list-body:after, .am-list-body:before {
+  display: none !important;
+}
+
