@@ -39,6 +39,10 @@ const paths = [
     name: "ant",
     path: "/ant",
   },
+  {
+    name: "CSS动画",
+    path: "/animation",
+  },
 ];
 
 export default () => {

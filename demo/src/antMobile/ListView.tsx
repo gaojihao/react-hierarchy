@@ -25,8 +25,8 @@ const List: React.FC = () => {
         rowHasChanged: (row1: any, row2: any) => row1 !== row2,
     });
 
-    
-    const row = (rowData: {title: string; img: string; des: string}) => {
+
+    const row = (rowData: { title: string; img: string; des: string }) => {
         return (
             <div style={{ padding: '0 15px' }}>
                 <div
@@ -49,17 +49,17 @@ const List: React.FC = () => {
 
     return (
         <ListView
-                dataSource={dataSource.cloneWithRows(data)}
-                renderRow={row}
-                style={{
-                    overflow: 'auto',
-                    height:'100%',
-                }}
-                pageSize={4}
-                onScroll={() => { console.log('scroll'); }}
-                scrollRenderAheadDistance={500}
-                onEndReachedThreshold={10}
-            />
+            dataSource={dataSource.cloneWithRows(data)}
+            renderRow={row}
+            style={{
+                overflow: 'auto',
+                height: '100%',
+            }}
+            pageSize={4}
+            onScroll={() => { console.log('scroll'); }}
+            scrollRenderAheadDistance={500}
+            onEndReachedThreshold={10}
+        />
     );
 }
 

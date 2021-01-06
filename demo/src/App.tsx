@@ -13,6 +13,7 @@ import ProxyPage from './proxy';
 import ReflectPage from './reflect';
 import SymbolPage from './symbol';
 import AntMobile from './antMobile';
+import Animation from './animation';
 import Header from './Header';
 
 export default function App() {
@@ -46,6 +47,9 @@ export default function App() {
             </Route>
             <Route path="/ant">
               <AntMobile />
+            </Route>
+            <Route path="/animation">
+              <Animation />
             </Route>
             <Route path="/">
               <Home />
