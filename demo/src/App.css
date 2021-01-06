@@ -2,17 +2,32 @@
   text-align: center;
 }
 
-.path-ref ul {
+.container {
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.path-ref ul li a {
+.page-container {
+  flex: 1;
+  width: 100%;
+}
+
+.container ul {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  align-items: center;
+}
+
+.container ul li a {
   padding: 15px;
   margin-right: 10px;
 }
 
-.path-ref ul a:hover {
+.container ul a:hover {
   background-color: hsl(219, 71%, 54%);
   color: white;
 }

@@ -53,9 +53,7 @@ const List: React.FC = () => {
                 renderRow={row}
                 style={{
                     overflow: 'auto',
-                    height:'100vh',
-                    marginTop:'20px',
-                    marginBottom:'20px',
+                    height:'100%',
                 }}
                 pageSize={4}
                 onScroll={() => { console.log('scroll'); }}

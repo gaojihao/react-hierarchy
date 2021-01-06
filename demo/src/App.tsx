@@ -16,40 +16,42 @@ import AntMobile from './antMobile';
 import Header from './Header';
 
 export default function App() {
-  
+
   return (
     <Router>
-      <div className='path-ref'>
+      <div className='container'>
         <Header />
-        <Switch>
-          <Route path="/hooks">
-            <HookPage />
-          </Route>
-          <Route path="/decorator">
-            <DecoratorPage />
-          </Route>
-          <Route path="/generator">
-            <GeneratorPage />
-          </Route>
-          <Route path="/iterator">
-            <IteratorPage />
-          </Route>
-          <Route path="/proxy">
-            <ProxyPage />
-          </Route>
-          <Route path="/reflect">
-            <ReflectPage />
-          </Route>
-          <Route path="/symbol">
-            <SymbolPage />
-          </Route>
-          <Route path="/ant">
-            <AntMobile />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <div className='page-container'>
+          <Switch>
+            <Route path="/hooks">
+              <HookPage />
+            </Route>
+            <Route path="/decorator">
+              <DecoratorPage />
+            </Route>
+            <Route path="/generator">
+              <GeneratorPage />
+            </Route>
+            <Route path="/iterator">
+              <IteratorPage />
+            </Route>
+            <Route path="/proxy">
+              <ProxyPage />
+            </Route>
+            <Route path="/reflect">
+              <ReflectPage />
+            </Route>
+            <Route path="/symbol">
+              <SymbolPage />
+            </Route>
+            <Route path="/ant">
+              <AntMobile />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
       </div>
     </Router>
   );
